@@ -25,6 +25,7 @@ class MainActivity2 : AppCompatActivity() {
         val recibeContrasena = intent.getStringExtra("par_contrasena")
 
         val btnIra3:Button = findViewById(R.id.btn_act2)
+        val btnIrCalculadora: Button = findViewById(R.id.btn_abrirCalc)
 
         btnIra3.setOnClickListener{
             val Ventana2 = Intent(this,MainActivity3::class.java)
@@ -32,6 +33,10 @@ class MainActivity2 : AppCompatActivity() {
             startActivity(Ventana2)
         }
 
+        btnIrCalculadora.setOnClickListener {
+            val VenCalculadora = Intent(this, MainActivity4::class.java)
+            startActivity(VenCalculadora)
+        }
 
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
